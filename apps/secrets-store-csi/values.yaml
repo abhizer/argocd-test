@@ -1,0 +1,10 @@
+csiDriver:
+    serviceAccount:
+        create: false
+        name: secrets-store-csi-driver
+    syncSecret:
+        enabled: true
+
+# Optional: if you want logging level, etc.
+node:
+    tolerations: []
