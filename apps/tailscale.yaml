@@ -11,6 +11,7 @@ spec:
           repoURL: "https://github.com/abhizer/argocd-test.git"
           targetRevision: main
         - repoURL: "https://pkgs.tailscale.com/helmcharts"
+          chart: tailscale-operator
           targetRevision: "1.90.5"
           helm:
               values: |
