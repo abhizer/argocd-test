@@ -13,12 +13,13 @@ spec:
           helm:
               values: |
                   oauth:
-                    clientId: TS_CLIENT_ID
-                    clientSecret: TS_CLIENT_SECRET
+                    clientId:
+                      name: ts-credentials
+                      key: TS_CLIENT_ID
+                    clientSecret:
+                      name: ts-credentials
+                      key: TS_CLIENT_SECRET
                   replicaCount: 1
-        - path: manifests/tailscale-operator
-          repoURL: "https://github.com/abhizer/argocd-test.git"
-          targetRevision: main
     destination:
         server: https://kubernetes.default.svc
         namespace: tailscale
