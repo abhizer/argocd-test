@@ -15,6 +15,7 @@ spec:
           helm:
               values: |
                   oauth: {}
+                  defaultTags: ["tag:ci-eks-operator"]
     destination:
         server: https://kubernetes.default.svc
         namespace: tailscale
