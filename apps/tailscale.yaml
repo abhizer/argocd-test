@@ -14,8 +14,7 @@ spec:
           targetRevision: "1.90.5"
           helm:
               values: |
-                  oauthSecretVolume:
-                    name: operator-oauth
+                  oauth: {}
     destination:
         server: https://kubernetes.default.svc
         namespace: tailscale
