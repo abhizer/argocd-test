@@ -14,16 +14,8 @@ spec:
           targetRevision: "1.90.5"
           helm:
               values: |
-                  oauth:
-                    secret:
-                      name: ts-credentials
-                    clientIdRef:
-                      name: ts-credentials
-                      key: TS_CLIENT_ID
-                    clientSecretRef:
-                      name: ts-credentials
-                      key: TS_CLIENT_SECRET
-                  replicaCount: 1
+                  oauthSecretVolume:
+                    name: ts-credentials
     destination:
         server: https://kubernetes.default.svc
         namespace: tailscale
