@@ -16,7 +16,7 @@ spec:
               values: |
                   oauth: {}
                   operatorConfig:
-                    defaultTags: ["tag:ci-eks-operator", "tag:ci-k8s"]
+                    defaultTags: ["tag:ci-k8s", "tag:ci-eks-operator"]
     destination:
         server: https://kubernetes.default.svc
         namespace: tailscale
