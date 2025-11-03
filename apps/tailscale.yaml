@@ -4,6 +4,8 @@ kind: Application
 metadata:
     name: tailscale-operator
     namespace: argocd
+    annotations:
+        argocd.argoproj.io/sync-wave: "1"
 spec:
     project: default
     sources:
@@ -27,3 +29,5 @@ spec:
         automated:
             prune: true
             selfHeal: true
+        syncOptions:
+            - CreateNamespace=true
