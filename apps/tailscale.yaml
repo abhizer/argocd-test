@@ -15,11 +15,11 @@ spec:
           helm:
               values: |
                   oauth:
-                    clientId:
+                    secret:
                       name: ts-credentials
+                    clientId:
                       key: TS_CLIENT_ID
                     clientSecret:
-                      name: ts-credentials
                       key: TS_CLIENT_SECRET
                   replicaCount: 1
     destination:
