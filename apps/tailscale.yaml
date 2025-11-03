@@ -12,10 +12,6 @@ spec:
         - repoURL: "https://pkgs.tailscale.com/helmcharts"
           chart: tailscale-operator
           targetRevision: "1.90.5"
-          helm:
-              values: |
-                  oauthSecretVolume:
-                    name: ts-credentials
     destination:
         server: https://kubernetes.default.svc
         namespace: tailscale
