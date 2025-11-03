@@ -16,6 +16,8 @@ spec:
               values: |
                   oauth: {}
                   operatorConfig:
+                    defaultTags: ["tag:ci-eks-operator"]
+                  proxyConfig:
                     defaultTags: ["tag:ci-k8s"]
     destination:
         server: https://kubernetes.default.svc
