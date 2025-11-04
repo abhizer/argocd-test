@@ -1,0 +1,10 @@
+apiVersion: tailscale.com/v1alpha1
+kind: ProxyGroup
+metadata:
+    name: argocd-cluster
+spec:
+    type: kube-apiserver
+    replicas: 2
+    tags: ["tag:ci-k8s"]
+    kubeAPIServer:
+        mode: auth
