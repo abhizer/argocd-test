@@ -21,7 +21,7 @@ spec:
                     defaultTags: "tag:ci-k8s"
                   apiServerProxyConfig:
                     mode: "true"
-                    allowImpersonation: true
+                    allowImpersonation: "true"
     destination:
         server: https://kubernetes.default.svc
         namespace: tailscale
