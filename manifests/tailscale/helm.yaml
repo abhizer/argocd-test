@@ -16,7 +16,7 @@ spec:
               values: |
                   oauth: {}
                   operatorConfig:
-                    defaultTags: "tag:ci-eks-operator"
+                    defaultTags: "tag:ci-eks-operator,ci-k8s"
                   proxyConfig:
                     defaultTags: "tag:ci-k8s"
                   apiServerProxyConfig:
