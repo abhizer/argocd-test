@@ -19,6 +19,8 @@ spec:
                     defaultTags: "tag:ci-eks-operator"
                   proxyConfig:
                     defaultTags: "tag:ci-k8s"
+                  apiServerProxyConfig:
+                    mode: "true"
     destination:
         server: https://kubernetes.default.svc
         namespace: tailscale
