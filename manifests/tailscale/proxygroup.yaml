@@ -4,7 +4,7 @@ metadata:
     name: argocd-cluster
 spec:
     type: kube-apiserver
-    replicas: 2
+    replicas: 3
     tags: ["tag:ci-k8s"]
     kubeAPIServer:
         mode: auth
