@@ -19,6 +19,8 @@ spec:
                   name: cert-manager
                   annotations:
                     eks.amazonaws.com/role-arn: "arn:aws:iam::586549104403:role/AwsFelderaCloudDnsAccess"
+                  prometheus:
+                    enabled: true
     destination:
         server: https://kubernetes.default.svc
         namespace: cert-manager
