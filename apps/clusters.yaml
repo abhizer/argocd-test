@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Secret
+metadata:
+    name: staging-cluster-secret
+    namespace: argocd # Replace with your Argo CD namespace
+    labels:
+        argocd.argoproj.io/secret-type: cluster
+type: Opaque
+stringData:
+    name: staging-cluster
+    server: https://F1B549F6173F7F66ADE68547D4869592.sk1.us-west-1.eks.amazonaws.com
+    config: |
+        {
+          "tlsClientConfig": {
+            "insecure": true,
+          }
+        }
