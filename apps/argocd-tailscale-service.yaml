@@ -1,3 +1,5 @@
+# Stop ArgoCD from being publicly reachable.
+# Set annotations to make it accessible only through Tailscale.
 apiVersion: v1
 kind: Service
 metadata:
