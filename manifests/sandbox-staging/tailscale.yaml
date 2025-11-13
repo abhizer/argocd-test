@@ -1,0 +1,31 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+    name: tailscale-operator
+    namespace: argocd
+    annotations:
+        argocd.argoproj.io/sync-wave: "10"
+spec:
+    project: default
+    sources:
+        - repoURL: "https://pkgs.tailscale.com/helmcharts"
+          chart: tailscale-operator
+          targetRevision: "1.90.5"
+          helm:
+              values: |
+                  oauth: {}
+                  operatorConfig:
+                    defaultTags: "tag:ci-eks-operator"
+                  proxyConfig:
+                    defaultTags: "tag:ci-k8s"
+                  apiServerProxyConfig:
+                    mode: "noauth"
+    destination:
+        name: sandbox-staging
+        namespace: tailscale
+    syncPolicy:
+        automated:
+            prune: true
+            selfHeal: true
+        syncOptions:
+            - CreateNamespace=true
