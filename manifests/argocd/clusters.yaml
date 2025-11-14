@@ -12,7 +12,7 @@ stringData:
         {
           "awsAuthConfig": {
             "clusterName": "staging-cluster",
-            "roleARN": "arn:aws:iam::905418091519:role/argocd-staging-access"
+            "roleARN": "arn:aws:iam::905418091519:role/argocd-master"
           },
           "tlsClientConfig": {
             "insecure": false,
