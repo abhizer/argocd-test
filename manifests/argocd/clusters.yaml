@@ -6,7 +6,7 @@ metadata:
         argocd.argoproj.io/secret-type: cluster
 type: Opaque
 stringData:
-    name: "sandbox-staging-cluster"
+    name: "sandbox-staging"
     server: "https://57E0C76A3E55345956B58C1D1C882DCA.sk1.us-west-1.eks.amazonaws.com"
     config: |
         {
