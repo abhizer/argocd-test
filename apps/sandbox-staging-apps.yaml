@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-    name: sandbox-staging
+    name: sandbox-staging-apps
     namespace: argocd
 spec:
     project: default
