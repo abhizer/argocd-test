@@ -22,7 +22,7 @@ spec:
                 prometheus:
                   enabled: true
     destination:
-        name: in-cluster
+        name: sandbox-staging
         namespace: cert-manager
     syncPolicy:
         automated:
