@@ -8,7 +8,7 @@ spec:
     source:
         repoURL: "https://github.com/abhizer/argocd-test.git"
         targetRevision: HEAD
-        path: manifests/sandbox-staging
+        path: manifests/sandbox-staging/resources
     destination:
         name: sandbox-staging
         namespace: feldera
